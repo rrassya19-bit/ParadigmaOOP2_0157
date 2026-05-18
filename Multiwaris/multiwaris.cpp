@@ -10,7 +10,6 @@ class orang {
         }
 };
 
-// virtual public = cegah duplikasi objek orang saat dipakai multiple inheritance
 class pekerja : virtual public orang {
     public:
         pekerja(int pUmur) : orang(pUmur) {
@@ -18,7 +17,6 @@ class pekerja : virtual public orang {
         }
 };
 
-// virtual public = cegah duplikasi objek orang saat dipakai multiple inheritance
 class pelajar : virtual public orang {
     public:
         pelajar(int pUmur) : orang(pUmur) {
@@ -26,6 +24,18 @@ class pelajar : virtual public orang {
         }
 };
 
+// budi mewarisi pekerja DAN pelajar (multiple inheritance)
+class budi : public pekerja, public pelajar {
+    public:
+        // orang(pUmur) wajib dipanggil di sini karena pakai virtual inheritance
+        // tanpa virtual, orang akan dibuat 2x (duplikat)
+        budi(int pUmur) : pekerja(pUmur), pelajar(pUmur), orang(pUmur) {
+            cout << "budi dibuat \n" << endl;
+        }
+};
+
 int main() {
+    budi a(12);  // Buat objek budi dengan umur 12
+                 // Urutan constructor: orang → pekerja → pelajar → budi
     return 0;
 }
