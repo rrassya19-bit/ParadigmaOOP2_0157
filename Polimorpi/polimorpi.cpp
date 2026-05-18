@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-class remoteLampu {   // Deklarasi class bernama remoteLampu
-
+class remoteLampu {
+    private:
+        string saklarNo[10];  // Array private berisi 10 slot nama lampu
 };
 
 int main() {
