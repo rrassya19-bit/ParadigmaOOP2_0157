@@ -3,11 +3,26 @@ using namespace std;
 
 class orang {
     public:
-        int umur;  // Atribut umur yang bisa diakses class turunan
+        int umur;
 
-        // Constructor: isi umur dan cetak pesan saat objek dibuat
         orang(int pUmur) : umur(pUmur) {
             cout << "orang dibuat dengan umur " << umur << "\n" << endl;
+        }
+};
+
+// virtual public = cegah duplikasi objek orang saat dipakai multiple inheritance
+class pekerja : virtual public orang {
+    public:
+        pekerja(int pUmur) : orang(pUmur) {
+            cout << "pekerja dibuat" << umur << "\n" << endl;
+        }
+};
+
+// virtual public = cegah duplikasi objek orang saat dipakai multiple inheritance
+class pelajar : virtual public orang {
+    public:
+        pelajar(int pUmur) : orang(pUmur) {
+            cout << "pelajar dibuat\n" << endl;
         }
 };
 
