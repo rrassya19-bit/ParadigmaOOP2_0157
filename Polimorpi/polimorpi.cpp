@@ -6,7 +6,10 @@ class remoteLampu {
         string saklarNo[10];  // Array private berisi 10 slot nama lampu
 
     public:
-        // Method public akan ditambahkan di sini
+        // Method untuk mengisi nama lampu pada posisi indeks i
+        void setSaklarNo(int i, string value) {
+            saklarNo[i] = value;  // Simpan value ke array pada posisi i
+        }
 };
 
 int main() {
