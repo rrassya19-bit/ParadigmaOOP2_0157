@@ -36,6 +36,6 @@ class budi : public pekerja, public pelajar {
 
 int main() {
     budi a(12);  // Buat objek budi dengan umur 12
-                 // Urutan constructor: orang → pekerja → pelajar → budi
+                 //Urutan constructor: orang → pekerja → pelajar → budi
     return 0;
 }
