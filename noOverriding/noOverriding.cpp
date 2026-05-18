@@ -12,15 +12,14 @@ class baseClass {
 
 class derivedClass : public baseClass {
     public:
-        // ERROR: tidak bisa override karena perkenalan() di baseClass pakai final
-        void perkenalan() {
+        void perkenalan1() {
             cout << "hallo saya function dari derived class";
         }
 };
 
 int main() {
     derivedClass a;   // Buat objek a dari class derivedClass
-    a.perkenalan();   // Panggil method perkenalan milik derivedClass
+    a.perkenalan1();   // Panggil method perkenalan1 milik derivedClass
 
     return 0;  // Program selesai dengan sukses
 }
