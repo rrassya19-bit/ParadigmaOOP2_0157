@@ -18,5 +18,19 @@ class remoteLampu {
 };
 
 int main() {
-    return 0;
+    remoteLampu lampuRumah;  // Buat objek remoteLampu bernama lampuRumah
+
+    // Isi nama lampu pada masing-masing indeks
+    lampuRumah.setSaklarNo(0, "lampu teras rumah");  // Indeks 0
+    lampuRumah.setSaklarNo(1, "lampu ruang tamu");   // Indeks 1
+    lampuRumah.setSaklarNo(2, "lampu kamar tidur");  // Indeks 2
+    lampuRumah.setSaklarNo(3, "lampu dapur");        // Indeks 3
+
+    // Tampilkan nama lampu berdasarkan indeks
+    cout << lampuRumah.getSaklarNo(0) << endl;  // Tampilkan indeks 0
+    cout << lampuRumah.getSaklarNo(2) << endl;  // Tampilkan indeks 2
+    cout << lampuRumah.getSaklarNo(3) << endl;  // Tampilkan indeks 3
+    cout << lampuRumah.getSaklarNo(4) << endl;  // Tampilkan indeks 4 (kosong)
+
+    return 0;  // Program selesai dengan sukses
 }
