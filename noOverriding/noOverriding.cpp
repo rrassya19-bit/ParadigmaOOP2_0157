@@ -3,14 +3,19 @@ using namespace std;
 
 class baseClass {
     public:
+        // virtual = bisa di-override oleh class turunan
+        // final   = TIDAK BOLEH di-override oleh class turunan (dikunci)
         virtual void perkenalan() final {
             cout << "hallo saya function dari base class";
         }
 };
 
 class derivedClass : public baseClass {
-    public:   // Semua method di bawah bisa diakses dari luar class
-
+    public:
+        // ERROR: tidak bisa override karena perkenalan() di baseClass pakai final
+        void perkenalan() {
+            cout << "hallo saya function dari derived class";
+        }
 };
 
 int main() {
