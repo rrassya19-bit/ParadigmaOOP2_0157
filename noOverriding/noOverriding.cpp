@@ -2,8 +2,12 @@
 using namespace std;
 
 class baseClass {
-    public:   // Semua method di bawah bisa diakses dari luar class
-
+    public:
+        // virtual = bisa di-override oleh class turunan
+        // final   = TIDAK BOLEH di-override oleh class turunan (dikunci)
+        virtual void perkenalan() final {
+            cout << "hallo saya function dari base class";
+        }
 };
 
 int main() {
