@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-class baseClass {   // Deklarasi class induk bernama baseClass
+class baseClass {
+    public:   // Semua method di bawah bisa diakses dari luar class
 
 };
 
