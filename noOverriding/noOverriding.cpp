@@ -19,5 +19,8 @@ class derivedClass : public baseClass {
 };
 
 int main() {
-    return 0;
+    derivedClass a;   // Buat objek a dari class derivedClass
+    a.perkenalan();   // Panggil method perkenalan milik derivedClass
+
+    return 0;  // Program selesai dengan sukses
 }
