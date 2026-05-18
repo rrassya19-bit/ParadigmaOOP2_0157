@@ -17,5 +17,11 @@ class remoteLampu {
 int main() {
     remoteLampu lampuRumah;  // Buat objek remoteLampu bernama lampuRumah
 
+    // Isi nama lampu pada masing-masing indeks
+    lampuRumah.setSaklarNo(0, "lampu teras rumah");  // Indeks 0
+    lampuRumah.setSaklarNo(1, "lampu ruang tamu");   // Indeks 1
+    lampuRumah.setSaklarNo(2, "lampu kamar tidur");  // Indeks 2
+    lampuRumah.setSaklarNo(3, "lampu dapur");        // Indeks 3
+
     return 0;
 }
