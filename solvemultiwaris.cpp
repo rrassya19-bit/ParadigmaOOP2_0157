@@ -10,7 +10,6 @@ class orang {
         }
 };
 
-// Inheritance biasa (tanpa virtual) = orang akan dibuat 2x jika dipakai multiple inheritance
 class pekerja : public orang {
     public:
         pekerja(int pUmur) : orang(pUmur) {
@@ -18,7 +17,6 @@ class pekerja : public orang {
         }
 };
 
-// Inheritance biasa (tanpa virtual) = orang akan dibuat 2x jika dipakai multiple inheritance
 class pelajar : public orang {
     public:
         pelajar(int pUmur) : orang(pUmur) {
@@ -26,6 +24,19 @@ class pelajar : public orang {
         }
 };
 
+// budi mewarisi pekerja DAN pelajar (multiple inheritance)
+class budi : public pekerja, public pelajar {
+    public:
+        // Tanpa virtual: orang dibuat 2x (sekali dari pekerja, sekali dari pelajar)
+        // orang(pUmur) TIDAK bisa dipanggil langsung di sini tanpa virtual
+        budi(int pUmur) : pekerja(pUmur), pelajar(pUmur) {
+            cout << "budi dibuat \n" << endl;
+        }
+};
+
 int main() {
+    budi a(12);  // Buat objek budi dengan umur 12
+                 // Urutan constructor: orang(pekerja) → pekerja → orang(pelajar) → pelajar → budi
+                 // Perhatikan orang dibuat 2x karena tidak pakai virtual!
     return 0;
 }
