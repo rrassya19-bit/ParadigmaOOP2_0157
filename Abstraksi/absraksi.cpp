@@ -20,5 +20,9 @@ class AbstraksiKlas {
 };
 
 int main() {
-    return 0;
+    AbstraksiKlas ak;                  // Buat objek dari class AbstraksiKlas
+    ak.setXY("Yogyakarta", "Kampus"); // Isi x = "Yogyakarta", y = "Kampus"
+    ak.display();                      // Tampilkan x dan y ke layar
+
+    return 0;  // Program selesai dengan sukses
 }
