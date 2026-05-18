@@ -8,8 +8,8 @@ class baseClass {
         }
 };
 
-// derivedClass mewarisi semua public member dari baseClass
 class derivedClass : public baseClass {
+    public:   // Semua method di bawah bisa diakses dari luar class
 
 };
 
