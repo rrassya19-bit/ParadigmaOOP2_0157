@@ -11,6 +11,12 @@ class AbstraksiKlas {
             x = a;  // Isi x dengan nilai parameter a
             y = b;  // Isi y dengan nilai parameter b
         }
+
+        // Method untuk menampilkan nilai private member ke layar
+        void display() {
+            cout << "x = " << x << endl;  // Tampilkan nilai x
+            cout << "y = " << y << endl;  // Tampilkan nilai y
+        }
 };
 
 int main() {
